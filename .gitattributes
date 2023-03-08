@@ -1,2 +1,96 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+package parcial2;
+
+import java.util.Random;
+
+public class atributos  {		
+	
+	static int numCabello;
+	static int numPecas;
+	static int numLentes;
+	static int numDep;
+	static int numFeo;
+	
+	static String [] cabello = {"  Tiene pelo  ", "  No tiene pelo  "};
+	static String [] pecas = {"  Tiene pecas  ", "  No tiene pecas  "};
+	static String [] lentes = {"  Tiene lentes  ", "  No tiene lentes  "};
+	static String [] deporte = {"  Hace deporte ", "  No hace deporte  "};
+	static String [] feo = {"  Huele feo  ", "  No huele feo  "};
+	
+	public static String tieneCabello (){
+		
+		Random randomCabello = new Random();
+		numCabello = randomCabello.nextInt(2);
+		
+		
+		
+		return cabello[numCabello];	
+	}
+	
+	public String tienePecas(){
+		
+		Random randomPecas = new Random();
+		numPecas = randomPecas.nextInt(2);
+		
+		
+		
+		return pecas[numPecas];
+		
+	}
+    public String tieneLentes(){
+    	
+    	Random randomLentes = new Random();
+    	numLentes = randomLentes.nextInt(2); 
+    	
+    	
+	
+		return lentes[numLentes];
+		
+	}
+    
+    public String haceDeporte(){
+    	
+    	Random randomDeportes = new Random();
+    	numDep = randomDeportes.nextInt(2);
+    	
+			
+		return deporte[numDep];
+		
+	}
+    public String hueleFeo(){
+    	
+    	Random randomFeo = new Random();
+    	numFeo = randomFeo.nextInt(2);
+    	
+    	
+
+		return feo[numFeo];
+		
+	}
+    
+
+ String [] nombres = {" Edgar ", " Ricardo "," Pablo "," Maria "," Jose "," Ana "," Gloria "," Valeria "," Diego "," Cristiano "};
+    static String[] names = new String[6];
+
+    public String nombre(){	
+    		
+    		for (int x=0; x<=9; x++) { 
+    			for (int y=0; y<=5; y++) {
+    			
+    			names[0] = nombres [x];
+    			names[1] = tieneCabello ();
+    			names[2] = tienePecas();
+    			names[3] = tieneLentes();
+    			names[4] = haceDeporte();
+    			names[5] = hueleFeo();
+    			
+    			System.out.println(names[y]);
+    			
+    		}
+    		}
+    		return null;		
+    		
+    }	
+    
+    
+    
+}
